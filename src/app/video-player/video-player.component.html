@@ -1,0 +1,25 @@
+<div class="video-wrapper" (mouseenter)="showcontrol()" (mouseleave)="hidecontrol()">
+  <div class="video">
+    <video [src]="videoUrl" preload></video>
+  </div>
+  <div class="thumb" [ngStyle]="{'background-image':'url('+thumbUrl+')'}"></div>
+  <app-spin></app-spin>
+</div>
+<div class="controls-wrapper" (mouseenter)="showcontrol()" [@control-state]="controlstate">
+  <button class="oper-btn">
+    <i class="fa" [ngClass]="oper"></i>
+  </button>
+  <div class="play-bar">
+    <app-video-progress></app-video-progress>
+    <div class="volumn">
+      <i class="fa fa-volume-up icon"></i>
+    </div>
+    <div class="prefs">
+      <i class="fa fa-gear icon"></i>
+    </div>
+    <div class="fullscreen">
+      <i class="fa fa-arrows-alt icon"></i>
+    </div>
+    <a href="#" class="logo"></a>
+  </div>
+</div>

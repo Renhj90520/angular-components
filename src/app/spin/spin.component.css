@@ -1,0 +1,53 @@
+.spin {
+  width: 18%;
+  max-width: 140px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.spin-trace {
+  fill: none;
+  stroke-width: 3%;
+  stroke: rgba(23, 35, 34, .75);
+  stroke-opacity: .6;
+}
+
+.spin-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  fill: none;
+  stroke-width: 3%;
+  max-width: 140px;
+  stroke: #fcfcfc;
+  stroke-linecap: round;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: rotate 2s linear .25s infinite, dash 1.5s ease-in-out .25s infinite;
+  transform-origin: 50% 50% 0px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}

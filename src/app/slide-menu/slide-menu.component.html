@@ -1,0 +1,41 @@
+<div class="slide-container" [@show]="state">
+  <div class="slide-content">
+    <p>Colors -
+      <i style="font-size:11px;"> * You can use Unlimited Colors</i>
+    </p>
+    <ul class="clearfix">
+      <li>
+        <a href="#" class="color cyan"></a>
+      </li>
+      <li>
+        <a href="#" class="color carrot"></a>
+      </li>
+      <li>
+        <a href="#" class="color pink"></a>
+      </li>
+      <li>
+        <a href="#" class="color green"></a>
+      </li>
+      <li>
+        <a href="#" class="color red"></a>
+      </li>
+      <li>
+        <a href="#" class="color blue"></a>
+      </li>
+      <li>
+        <a href="#" class="color purple"></a>
+      </li>
+      <li>
+        <a href="#" class="color yellow"></a>
+      </li>
+    </ul>
+    <p>Template Style</p>
+    <p class="flx-slect-layout">
+      <input type="radio" checked="checked" id="light">
+      <label for="light">Light</label>
+      <input type="radio" checked="checked" id="dark">
+      <label for="dark">Dark</label>
+    </p>
+  </div>
+  <a class="toggle-btn" (click)="toggleMenu()"></a>
+</div>

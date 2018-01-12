@@ -1,0 +1,37 @@
+<div class="wrapper" [@slide]="slidestate" (mouseleave)="slideout($event)">
+  <ul>
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">iGally</a>
+    </li>
+    <li>
+      <a href="#">Portfolio</a>
+    </li>
+    <li>
+      <a href="#">Single Project</a>
+    </li>
+    <li>
+      <a href="#">Blog Posts</a>
+    </li>
+    <li>
+      <a href="#">Single Article</a>
+    </li>
+    <li>
+      <a href="#">Videos</a>
+    </li>
+    <li>
+      <a href="#">External Link</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+</div>
+<div class="toggle" (mouseenter)="slidein()" (mouseleave)="slideout($event)">
+  <a href="#">SlideMenu</a>
+</div>

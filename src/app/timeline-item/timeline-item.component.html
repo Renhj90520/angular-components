@@ -1,0 +1,46 @@
+<div class="icon">
+  <div>
+    <i class="fa fa-camera"></i>
+  </div>
+  <span class="circle"></span>
+</div>
+<div class="entry-body">
+  <header>
+    <span class="triangle"></span>
+    <h4 class="title">
+      <a href="#">This is sample standard blog post</a>
+    </h4>
+    <span>
+      <i class="fa fa-user"></i>
+      <a href="#">Admin</a>
+    </span>
+    <span>
+      <i class="fa fa-clock-o"></i>
+      <a href="#">17-08-2013</a>
+    </span>
+    <span>
+      <i class="fa fa-comments"></i>
+      <a href="#">12 comments</a>
+    </span>
+    <span>
+      <i class="fa fa-suitcase"></i>
+      <a href="#">Tutorials</a>
+    </span>
+  </header>
+  <div class="entry-content clearfix">
+    <div class="entry-thumb hover-effect">
+      <div class="mask" [@v_action]='mask_state' (mouseleave)="hidemask()">
+        <a href="#">
+          <i class="fa fa-plus"></i>
+        </a>
+      </div>
+      <img src="http://www.placehold.it/200x200" alt="" (mouseenter)='showmask()'>
+    </div>
+    <p>This is the default format for a blog post. This post type has a large and single image at the beginning. All blog styles
+      are equipped with the tag mechanism, social sharing widget, author introduction, related posts, and comment box with
+      reply.
+    </p>
+    <a class="more-link ajax" href="news-standard.html">Read more</a>
+  </div>
+
+</div>

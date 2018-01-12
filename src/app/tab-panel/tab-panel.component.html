@@ -1,0 +1,22 @@
+<ul class="tabs">
+  <li [ngClass]="{'active':active1}">
+    <a (click)="doactive1()">RECENT</a>
+  </li>
+  <li [ngClass]="{'active':active2}">
+    <a (click)="doactive2()">POPULAR</a>
+  </li>
+</ul>
+<div class="content">
+  <div class="tab-pane" [ngClass]="{'active':active1}">
+    <a href="#">Sed sit amet justo ac risus mattis varius qellus</a>
+    <span>3 August, 2012</span>
+    <a href="#">Sed sit amet justo ac risus mattis varius qellus</a>
+    <span>3 August, 2012</span>
+    <a href="#">Sed sit amet justo ac risus mattis varius qellus</a>
+    <span>3 August, 2012</span>
+  </div>
+  <div class="tab-pane active" [ngClass]="{'active':active2}">
+    <a href="#">Sed sit amet justo ac risus mattis varius qellus t amet justo ac risus mattis var t amet justo ac risus mattis var</a>
+    <span>2 August, 2012</span>
+  </div>
+</div>

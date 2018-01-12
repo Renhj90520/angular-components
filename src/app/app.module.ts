@@ -1,0 +1,52 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { SlideMenuComponent } from './slide-menu/slide-menu.component';
+import { DownArrowComponent } from './down-arrow/down-arrow.component';
+import { ScrollNavbarComponent } from './scroll-navbar/scroll-navbar.component';
+import { PrograssBarComponent } from './prograss-bar/prograss-bar.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { TimelineItemComponent } from './timeline-item/timeline-item.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { HiIconComponent } from './hi-icon/hi-icon.component';
+import { TriangleBoxComponent } from './triangle-box/triangle-box.component';
+import { SlideMenuFullComponent } from './slide-menu-full/slide-menu-full.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+import { SpinComponent } from './spin/spin.component';
+import { VideoProgressComponent } from './video-progress/video-progress.component';
+import { ScrollPanelComponent } from './scroll-panel/scroll-panel.component';
+import { ScrollBarComponent } from './scroll-bar/scroll-bar.component';
+import { InputComponent } from './input/input.component';
+import { TabPanelComponent } from './tab-panel/tab-panel.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SlideMenuComponent,
+    DownArrowComponent,
+    ScrollNavbarComponent,
+    PrograssBarComponent,
+    TimelineComponent,
+    TimelineItemComponent,
+    TooltipComponent,
+    HiIconComponent,
+    TriangleBoxComponent,
+    SlideMenuFullComponent,
+    VideoPlayerComponent,
+    SpinComponent,
+    VideoProgressComponent,
+    ScrollPanelComponent,
+    ScrollBarComponent,
+    InputComponent,
+    TabPanelComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

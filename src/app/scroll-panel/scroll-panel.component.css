@@ -1,0 +1,17 @@
+:host {
+  width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  height: auto;
+}

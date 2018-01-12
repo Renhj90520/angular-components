@@ -1,0 +1,99 @@
+.slide-container {
+  display: flex;
+  position: fixed;
+  top: 100px;
+  z-index: 99999;
+  color: #3d3d3d;
+  left: -308px;
+}
+
+.slide-content {
+  width: 308px;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  padding: 10px 20px 20px 20px;
+  border-radius: 3px;
+}
+
+.slide-content p {
+  display: block;
+  width: 100%;
+  background: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  clear: both;
+}
+
+li {
+  float: left;
+  margin: 0 1px 1px 0;
+}
+
+li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: 0 0;
+  background-image: url('/assets/images/switch-color-active.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #ccc;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.color.carrot {
+  background-color: #e77874 !important;
+}
+
+.color.cyan {
+  background-color: #37bdb5 !important;
+}
+
+.color.pink {
+  background-color: #ec6197 !important;
+}
+
+.color.green {
+  background-color: #89b424 !important;
+}
+
+.color.red {
+  background-color: #d44646 !important;
+}
+
+.color.blue {
+  background-color: #3498db !important;
+}
+
+.color.purple {
+  background-color: #8e44ad !important;
+}
+
+.color.yellow {
+  background-color: #f1c40f !important;
+}
+
+li a:hover,
+li a:active {
+  background-size: 10px 10px;
+  opacity: .5;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  background-image: url('/assets/images/setting.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 0 2px 2px 0;
+  margin-left: -1px;
+  border-left: 0;
+}

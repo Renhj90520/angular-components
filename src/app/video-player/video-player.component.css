@@ -1,0 +1,78 @@
+:host {
+  display: block;
+  width: 800px;
+  height: 450px;
+  margin: 10px auto;
+  background-color: black;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  visibility: hidden;
+}
+
+.controls-wrapper {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.oper-btn {
+  width: 80px;
+  height: 50px;
+  background-color: #131c21;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+.oper-btn:hover {
+  background-color: #ff033e;
+}
+
+.play-bar {
+  display: flex;
+  width: 635px;
+  height: 38px;
+  background: #131c21;
+  border-radius: 2px;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+  background: transparent;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: #ff033e;
+}
