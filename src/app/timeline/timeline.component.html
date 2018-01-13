@@ -4,7 +4,9 @@
 
 <app-timeline-item class="clearfix"></app-timeline-item>
 <app-timeline-item class="clearfix"></app-timeline-item>
-<a href="#" id="last-oper" (mouseenter)="showtooltip()" (mouseleave)="hidetooltip()">
-  <i class="fa fa-plus" (mouseenter)="showtooltip()"></i>
-  <app-tooltip [message]="tooltip" [@tooltipstate]="tooltipstate"></app-tooltip>
-</a>
+<div class="wrapper">
+  <a href="#" id="last-oper" (mouseenter)="showtooltip()" (mouseleave)="hidetooltip()">
+    <i class="fa fa-plus" (mouseenter)="showtooltip()"></i>
+    <app-tooltip [message]="tooltip"></app-tooltip>
+  </a>
+</div>

@@ -1,0 +1,48 @@
+<a (click)="toggle()">
+  <i class="fa fa-user icon"></i>
+  <span>Users Actions</span>
+</a>
+<ul #subs>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[0]">
+    <a href="#" title="Show list">
+      <i class="fa fa-th-list"></i>
+      <app-tooltip *ngIf="state" message="Show list"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[1]">
+    <a href="#" title="Add new">
+      <i class="fa fa-plus"></i>
+      <app-tooltip *ngIf="state" message="Add new"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[2]">
+    <a href="#" title="Registrations">
+      <i class="fa fa-check"></i>
+      <app-tooltip *ngIf="state" message="Registrations"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[3]">
+    <a href="#" title="Send mail">
+      <i class="fa fa-envelope"></i>
+      <app-tooltip *ngIf="state" message="Send mail"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[4]">
+    <a href="#" title="Top users">
+      <i class="fa fa-star"></i>
+      <app-tooltip *ngIf="state" message="Top users"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[5]">
+    <a href="#" title="Users activity">
+      <i class="fa fa-signal"></i>
+      <app-tooltip *ngIf="state" message="Users activity"></app-tooltip>
+    </a>
+  </li>
+  <li [ngClass]="{'hide':!state,'show':state}" [ngStyle]="positions[6]">
+    <a href="#" title="Last comments">
+      <i class="fa fa-comment"></i>
+      <app-tooltip *ngIf="state" message="Last comments"></app-tooltip>
+    </a>
+  </li>
+</ul>

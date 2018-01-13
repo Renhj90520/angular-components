@@ -20,6 +20,7 @@ import { ScrollPanelComponent } from './scroll-panel/scroll-panel.component';
 import { ScrollBarComponent } from './scroll-bar/scroll-bar.component';
 import { InputComponent } from './input/input.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
+import { RoundControlComponent } from './round-control/round-control.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
     ScrollPanelComponent,
     ScrollBarComponent,
     InputComponent,
-    TabPanelComponent
+    TabPanelComponent,
+    RoundControlComponent
   ],
   imports: [
     BrowserModule,

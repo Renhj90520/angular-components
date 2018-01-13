@@ -12,3 +12,8 @@ app-scroll-panel {
   height: 80px;
   top: 0;
 }
+.wrapper{
+  background-color: #ebeae7;
+  padding: 10px;
+  margin: 10px;
+}

@@ -3,24 +3,14 @@
   font-size: 11px;
   display: block;
   z-index: 999;
-  padding: 5px;
-  left: -50%;
-  margin-left: -6px;
-}
-
-.arrow {
-  border-width: 5px 5px 0;
-  position: absolute;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #37bdb5;
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
+  top: -110%;
+  min-width: 100px;
+  opacity: 0;
+  transition: all .3s ease-out;
 }
 
 .inner {
-  background-color: #37bdb5;
+  background-color: rgba(24, 193, 208, .5);
   max-width: 200px;
   padding: 3px 8px;
   color: white;
@@ -29,4 +19,16 @@
   min-width: 100px;
   height: 36px;
   line-height: 30px;
+}
+
+.inner::after {
+  content: '';
+  border-width: 5px 5px 0;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: rgba(24, 193, 208, .5);
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
 }
