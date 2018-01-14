@@ -9,6 +9,14 @@ export class AppComponent implements OnInit {
   ids = [
     'home', 'about', 'services', 'portfolio', 'news', 'scrollpanel'
   ];
+  keyvalues = [
+    { key: 0, value: 'home' },
+    { key: 1, value: 'about' },
+    { key: 2, value: 'services' },
+    { key: 3, value: 'portfolio' },
+    { key: 4, value: 'news' },
+    { key: 5, value: 'scrollpanel' }
+  ];
   sections: number[];
   @ViewChild('home') home;
   @ViewChild('about') about;
@@ -25,5 +33,8 @@ export class AppComponent implements OnInit {
     this.sections.push(this.portfolio.nativeElement.offsetTop);
     this.sections.push(this.news.nativeElement.offsetTop);
     this.sections.push(this.scrollpanel.nativeElement.offsetTop);
+  }
+  dovote(event) {
+    console.log(event);
   }
 }

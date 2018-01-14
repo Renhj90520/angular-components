@@ -1,0 +1,11 @@
+<div class="control-area">
+  <a class="input-area btn" (click)="toggle()">{{selected.value}}</a>
+  <a class="toggle btn" (click)="toggle()">
+    <i class="fa fa-sort-down"></i>
+  </a>
+</div>
+<ul [ngClass]="{'show':+state}">
+  <li *ngFor="let item of items;let i=index;" [ngClass]="{selected:i==index}" (click)="select(i)">
+    <a>{{item.value}}</a>
+  </li>
+</ul>

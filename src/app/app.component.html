@@ -119,11 +119,19 @@
       </div>
       <a href="#" class="button">Download the CV</a>
     </div>
-    <app-input></app-input>
+    <div class="wrappe">
+      <app-dropdown-input [items]="keyvalues"></app-dropdown-input>
+    </div>
+    <div class="wrapper">
+      <app-input></app-input>
+    </div>
   </app-scroll-panel>
 </section>
 
 <app-tab-panel></app-tab-panel>
 <div class="wrapper">
   <app-round-control></app-round-control>
+</div>
+<div class="wrapper">
+  <app-vote-rate currentValue="2" (vote)="dovote($event)"></app-vote-rate>
 </div>

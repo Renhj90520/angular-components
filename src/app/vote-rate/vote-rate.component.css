@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.active {
+  color: #ffd118;
+}
