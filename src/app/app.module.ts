@@ -23,6 +23,7 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { RoundControlComponent } from './round-control/round-control.component';
 import { VoteRateComponent } from './vote-rate/vote-rate.component';
 import { DropdownInputComponent } from './dropdown-input/dropdown-input.component';
+import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DropdownInputComponent } from './dropdown-input/dropdown-input.componen
     TabPanelComponent,
     RoundControlComponent,
     VoteRateComponent,
-    DropdownInputComponent
+    DropdownInputComponent,
+    GalleryItemComponent
   ],
   imports: [
     BrowserModule,

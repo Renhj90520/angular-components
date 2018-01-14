@@ -1,0 +1,71 @@
+:host {
+  display: inline-block;
+  width: 320px;
+  height: 220px;
+  background: white;
+  border: 10px solid white;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+img {
+  display: block;
+  position: relative;
+  min-width: 300px;
+  min-height: 200px;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .7);
+  transition: all .3s ease-out .5s;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 20px;
+  line-height: 40px;
+}
+
+p {
+  color: #333;
+  text-align: center;
+  font-style: italic;
+  padding: 10px 20px 20px;
+  font-size: 12px;
+}
+
+.more {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background-color: #000;
+  color: #FFF;
+  box-shadow: 0 0 1px #000;
+}
+
+.more:hover {
+  box-shadow: 0 0 5px #000;
+}
