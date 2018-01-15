@@ -21,19 +21,19 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       style({ transform: 'translateY(0px)', offset: 1 }),
     ])))
   ]),
-  trigger('downdely400', [
+  trigger('downdelay400', [
     state('show', style({ transform: 'translateY(0)' })),
     state('hide', style({ transform: 'translateY(-200px)' })),
     transition('hide=>show', animate('200ms 400ms ease-in-out')),
     transition('show=>hide', animate('200ms 100ms ease-in-out')),
   ]),
-  trigger('downdely200', [
+  trigger('downdelay200', [
     state('show', style({ transform: 'translateY(0px)' })),
     state('hide', style({ transform: 'translateY(-200px)' })),
     transition('hide=>show', animate('200ms 200ms ease-in-out')),
     transition('show=>hide', animate('200ms 200ms ease-in-out')),
   ]),
-  trigger('downdely0', [
+  trigger('downdelay0', [
     state('show', style({ transform: 'translateY(0px)' })),
     state('hide', style({ transform: 'translateY(-200px)' })),
     transition('hide=>show', animate('200ms ease-in-out')),
