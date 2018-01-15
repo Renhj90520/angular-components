@@ -21,6 +21,6 @@ export class DropdownInputComponent implements OnInit {
   select(index) {
     this.index = index;
     this.selected = this.items[index];
-    console.log(this.index);
+    this.state = false;
   }
 }
