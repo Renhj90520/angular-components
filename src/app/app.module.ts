@@ -24,6 +24,7 @@ import { RoundControlComponent } from './round-control/round-control.component';
 import { VoteRateComponent } from './vote-rate/vote-rate.component';
 import { DropdownInputComponent } from './dropdown-input/dropdown-input.component';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item-animate.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
     RoundControlComponent,
     VoteRateComponent,
     DropdownInputComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    GalleryItemAnimateComponent
   ],
   imports: [
     BrowserModule,
