@@ -8,8 +8,6 @@
 }
 
 .wrapper {
-  margin-top: 62px;
-  height: 246px;
   position: relative;
   border-radius: 5px;
 }
@@ -17,15 +15,12 @@
 .range {
   position: absolute;
   width: 100%;
-  bottom: -62px;
 }
 
 .handler {
-  height: 124px;
   border-radius: 5px;
   width: 8px;
   margin: 0 auto;
-  margin-bottom: -62px;
   display: block;
   position: absolute;
   background-color: #e5e5e5;

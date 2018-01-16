@@ -1,8 +1,8 @@
 :host {
-  width: 800px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  background: white;
+  background: transparent;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -10,8 +10,6 @@
 
 .scroll-content {
   position: absolute;
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
   height: auto;
 }

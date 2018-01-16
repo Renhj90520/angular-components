@@ -1,4 +1,5 @@
 <div class="scroll-content" #content [ngStyle]="{'top':+offset+'px'}">
   <ng-content></ng-content>
 </div>
-<app-scroll-bar [rangeheight]="barheight" (drag)="drag($event)" [@scrollbarstate]="scrollbarstate"></app-scroll-bar>
+<app-scroll-bar #scrollbar [rangeheight]="barheight" [contentHeight]="contentheight" [panelHeight]="elheight" (drag)="drag($event)"
+  [@scrollbarstate]="scrollbarstate"></app-scroll-bar>

@@ -16,7 +16,7 @@
 <section #news>
   <app-video-player thumbUrl="https://i.vimeocdn.com/video/629997474.webp?mw=800&mh=450" videoUrl="https://03-lvl3-pdl.vimeocdn.com/01/4175/1/45878034/109676038.mp4?expires=1515400002&token=01719db9c18b2bd1bac22"></app-video-player>
 </section>
-<section #scrollpanel>
+<section class="scroll-panel-wrapper" #scrollpanel>
   <app-scroll-panel>
     <div id="wrapper-resume">
       <div class="resume">
@@ -139,3 +139,4 @@
   <app-gallery-item src="assets/images/example_4.jpg" title="LOREM IPSUM DOLOR" description="Some description"></app-gallery-item>
   <app-gallery-item-animate src="assets/images/example_4.jpg" title="LOREM IPSUM DOLOR" description="Some description"></app-gallery-item-animate>
 </div>
+<app-gallery #gallery title="Sortable Gallery" [photos]="photos"></app-gallery>

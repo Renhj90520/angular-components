@@ -1,5 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/take';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,12 +20,14 @@ export class AppComponent implements OnInit {
     { key: 5, value: 'scrollpanel' }
   ];
   sections: number[];
+  photos = [];
   @ViewChild('home') home;
   @ViewChild('about') about;
   @ViewChild('services') services;
   @ViewChild('portfolio') portfolio;
   @ViewChild('news') news;
   @ViewChild('scrollpanel') scrollpanel;
+  @ViewChild('gallery') gallery;
 
   ngOnInit() {
     this.sections = [];
@@ -33,6 +37,14 @@ export class AppComponent implements OnInit {
     this.sections.push(this.portfolio.nativeElement.offsetTop);
     this.sections.push(this.news.nativeElement.offsetTop);
     this.sections.push(this.scrollpanel.nativeElement.offsetTop);
+
+    Observable.interval(2000).take(5).forEach(() => {
+      this.photos.push({ src: 'assets/images/example_4.jpg', title: 'LOREM IPSUM DOLOR', description: 'Some description' });
+      this.photos.push({ src: 'assets/images/example_4.jpg', title: 'LOREM IPSUM DOLOR', description: 'Some description' });
+      this.photos.push({ src: 'assets/images/example_4.jpg', title: 'LOREM IPSUM DOLOR', description: 'Some description' });
+      this.gallery.onItemNumChange();
+    });
+
   }
   dovote(event) {
     console.log(event);

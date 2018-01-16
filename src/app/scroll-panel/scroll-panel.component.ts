@@ -12,9 +12,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class ScrollPanelComponent implements OnInit {
   @ViewChild('content') content;
+  @ViewChild('scrollbar') scrollbar;
   scrollbarstate = 'hide';
   scrollheight: number;
   barheight = '100%';
+  contentheight: number;
+  elheight: number;
   offset = 0;
   constructor(private el: ElementRef) {
     el.nativeElement.onmousewheel = (event) => {
@@ -23,12 +26,7 @@ export class ScrollPanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    const contentheight = this.content.nativeElement.clientHeight;
-    const elheight = this.el.nativeElement.clientHeight;
-    if (contentheight > elheight) {
-      this.scrollbarstate = 'visible';
-      this.scrollheight = contentheight - elheight;
-    }
+    this.measure();
   }
   scroll(deltaY) {
     if (this.offset <= 0) {
@@ -51,5 +49,19 @@ export class ScrollPanelComponent implements OnInit {
   drag(event) {
     this.scroll(event * this.scrollheight);
   }
+  measure() {
+    this.contentheight = this.content.nativeElement.clientHeight;
+    this.elheight = this.el.nativeElement.clientHeight;
 
+    if (this.contentheight > this.elheight) {
+      this.scrollbarstate = 'visible';
+      this.scrollheight = this.contentheight - this.elheight;
+      this.scrollbar.panelContentChange();
+    }
+  }
+  onContentChange() {
+    setTimeout(() => {
+      this.measure();
+    }, 600);
+  }
 }

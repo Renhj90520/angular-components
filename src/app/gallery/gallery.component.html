@@ -1,0 +1,9 @@
+<div class="header">
+  <i class="fa fa-photo"></i>
+  <h2>{{title}}</h2>
+</div>
+<app-scroll-panel class="content" #content>
+  <app-gallery-item *ngFor="let photo of photos" [src]="photo.src" [title]="photo.title" [description]="photo.description"></app-gallery-item>
+</app-scroll-panel>
+<!-- <div class="content">
+</div> -->

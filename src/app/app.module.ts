@@ -25,6 +25,7 @@ import { VoteRateComponent } from './vote-rate/vote-rate.component';
 import { DropdownInputComponent } from './dropdown-input/dropdown-input.component';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item-animate.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item
     VoteRateComponent,
     DropdownInputComponent,
     GalleryItemComponent,
-    GalleryItemAnimateComponent
+    GalleryItemAnimateComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

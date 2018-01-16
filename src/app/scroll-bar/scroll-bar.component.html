@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" [ngStyle]="{'height':wrapperHeight+'px','margin-top':+(-handlerMargin)+'px'}">
   <div class="range" [ngStyle]="{'height':+rangeheight}"></div>
-  <a class="handler" #handler [ngStyle]="{'bottom':+rangeheight}"></a>
+  <a class="handler" #handler [ngStyle]="{'bottom':+rangeheight,'height':+handlerHeight+'px','margin-bottom':+handlerMargin+'px'}"></a>
 </div>
