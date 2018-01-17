@@ -1,0 +1,7 @@
+<a class="title" (click)="toggleState()">
+  <i class="fa" [ngClass]="{'fa-plus':+!state,'fa-minus':+state}"></i>
+  <span>{{title}}</span>
+</a>
+<div class="content" [ngClass]="{'open':state}" [ngStyle]="{'margin-top':+margin+'px'}">
+  <ng-content></ng-content>
+</div>

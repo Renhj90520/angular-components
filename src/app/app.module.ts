@@ -27,6 +27,7 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item-animate.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CollapsePanelComponent } from './collapse-panel/collapse-panel.component';
+import { CollapsePanelOtherComponent } from './collapse-panel-other/collapse-panel-other.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CollapsePanelComponent } from './collapse-panel/collapse-panel.componen
     GalleryItemComponent,
     GalleryItemAnimateComponent,
     GalleryComponent,
-    CollapsePanelComponent
+    CollapsePanelComponent,
+    CollapsePanelOtherComponent
   ],
   imports: [
     BrowserModule,

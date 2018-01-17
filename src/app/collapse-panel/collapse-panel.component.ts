@@ -1,10 +1,11 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 @Component({
   selector: 'app-collapse-panel',
   templateUrl: './collapse-panel.component.html',
   styleUrls: ['./collapse-panel.component.css']
 })
 export class CollapsePanelComponent implements OnInit {
+  @Input() title: string;
   state = false;
   constructor(private el: ElementRef) { }
 
