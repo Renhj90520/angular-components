@@ -1,0 +1,13 @@
+<a class="toggle" [ngClass]="{'collapse':!state}" (click)="toggle()">
+  <i class="fa" [ngClass]="{'fa-plus':!state,'fa-minus':state}"></i>
+</a>
+<div class="info-wrapper">
+  <div class="title">
+    <a class="toggle-title" (click)="toggle()">
+      Doloribus asperiores repellat?
+    </a>
+  </div>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

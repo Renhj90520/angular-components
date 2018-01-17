@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  background-color: transparent;
+  height: 40px;
+  overflow: hidden;
+  transition: all 500ms;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.toggle {
+  display: inline-block;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 8px;
+  background-color: #4e5257;
+}
+
+.toggle.collapse {
+  background-color: #b6d82f;
+}
+
+.info-wrapper {
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+.title {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+
+.title a {
+  color: #4e5257;
+  font-size: 1.2em;
+}
+
+.title a:hover {
+  color: #b6d82f;
+}
+
+.content {
+  padding: 0 10px 10px 15px;
+  color: #8d8d8d;
+  height: auto;
+}

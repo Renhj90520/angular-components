@@ -26,6 +26,7 @@ import { DropdownInputComponent } from './dropdown-input/dropdown-input.componen
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item-animate.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { CollapsePanelComponent } from './collapse-panel/collapse-panel.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     DropdownInputComponent,
     GalleryItemComponent,
     GalleryItemAnimateComponent,
-    GalleryComponent
+    GalleryComponent,
+    CollapsePanelComponent
   ],
   imports: [
     BrowserModule,
