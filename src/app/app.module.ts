@@ -28,6 +28,8 @@ import { GalleryItemAnimateComponent } from './gallery-item-animate/gallery-item
 import { GalleryComponent } from './gallery/gallery.component';
 import { CollapsePanelComponent } from './collapse-panel/collapse-panel.component';
 import { CollapsePanelOtherComponent } from './collapse-panel-other/collapse-panel-other.component';
+import { SlideCarouselComponent } from './slide-carousel/slide-carousel.component';
+import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { CollapsePanelOtherComponent } from './collapse-panel-other/collapse-pan
     GalleryItemAnimateComponent,
     GalleryComponent,
     CollapsePanelComponent,
-    CollapsePanelOtherComponent
+    CollapsePanelOtherComponent,
+    SlideCarouselComponent,
+    RollCarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -12,14 +12,25 @@ app-scroll-panel {
   height: 80px;
   top: 0;
 }
-.wrapper{
+
+.wrapper {
   background-color: #ebeae7;
   padding: 10px 60px;
-  margin: 10px;
 }
-.scroll-panel-wrapper{
+
+.scroll-panel-wrapper {
   width: 600px;
   height: 400px;
   margin: 20px auto;
   background-color: #FFF;
+}
+
+app-slide-carousel {
+  width: 900px;
+  height: 400px;
+}
+
+app-roll-carousel {
+  width: 900px;
+  height: 80px;
 }

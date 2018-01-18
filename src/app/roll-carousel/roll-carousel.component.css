@@ -1,0 +1,76 @@
+:host {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrapper {
+  transition: all 600ms;
+}
+
+.wrapper li {
+  display: inline-block;
+  border-top: 3px solid #000;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.wrapper li:hover {
+  border-top: 3px solid #e55137;
+}
+
+.oper {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .3);
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  margin-top: -15px;
+  z-index: 999;
+}
+
+.oper:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.oper:hover i {
+  color: white;
+}
+
+.oper i {
+  color: rgba(255, 255, 255, .8);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.left {
+  left: 10px;
+}
+
+.left i {
+  margin-left: -3px;
+}
+
+.right {
+  right: 10px;
+}
+
+.right i {
+  margin-right: -3px;
+}

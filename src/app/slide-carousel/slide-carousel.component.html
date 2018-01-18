@@ -1,0 +1,16 @@
+<div class="viewport">
+  <ul class="wrapper" [ngStyle]="{'width':+wrapperWidth+'px','transform':'translateX('+offset+'px)'}">
+    <li *ngFor="let item of items">
+      <img [src]="item.src" [ngStyle]="{'width':+width+'px','height':+height+'px'}">
+    </li>
+  </ul>
+</div>
+<div class="oper left" [@left-fly]="state" (click)="prev()">
+  <i class="fa fa-angle-left"></i>
+</div>
+<div class="oper right" [@right-fly]="state" (click)="next()">
+  <i class="fa fa-angle-right"></i>
+</div>
+<ul class="indicator">
+  <li *ngFor="let item of items;let i=index;" (click)="slideTo(i)" [ngClass]="{'active':i===current}"></li>
+</ul>

@@ -28,7 +28,14 @@ export class AppComponent implements OnInit {
   @ViewChild('news') news;
   @ViewChild('scrollpanel') scrollpanel;
   @ViewChild('gallery') gallery;
-
+  carouselItems = [
+    { src: 'assets/images/banner-width1.png' },
+    { src: 'assets/images/banner-width2.png' },
+    { src: 'assets/images/banner-width3.png' },
+    { src: 'assets/images/banner-width4.png' },
+    { src: 'assets/images/banner-width5.png' },
+    { src: 'assets/images/banner-width1.png' },
+  ];
   ngOnInit() {
     this.sections = [];
     this.sections.push(this.home.nativeElement.offsetTop);

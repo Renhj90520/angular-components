@@ -142,7 +142,11 @@
 <app-gallery #gallery title="Sortable Gallery" [photos]="photos"></app-gallery>
 <div class="wrapper">
   <app-collapse-panel-other title="Title">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius ligula et enim posuere ac hendrerit eros varius. Mauris ut sollicitudin odio. Aliquam in facilisis massa. Donec vel est adipiscing dui congue bibendum. Aliquam aliquam sollicitudin euismod. Fusce sit amet scelerisque urna. Curabitur ultrices velit sed metus dignissim venenatis. Vivamus urna augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec orci mattis lobortis. Vivamus id libero est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius ligula et enim posuere ac hendrerit eros varius.
+      Mauris ut sollicitudin odio. Aliquam in facilisis massa. Donec vel est adipiscing dui congue bibendum. Aliquam aliquam
+      sollicitudin euismod. Fusce sit amet scelerisque urna. Curabitur ultrices velit sed metus dignissim venenatis. Vivamus
+      urna augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec orci mattis lobortis. Vivamus id libero
+      est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
   </app-collapse-panel-other>
 </div>
 
@@ -158,4 +162,8 @@
       desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
   </app-collapse-panel>
+</div>
+<div class="wrapper">
+  <app-slide-carousel [items]="carouselItems"></app-slide-carousel>
+  <app-roll-carousel [items]="carouselItems" [showItemNum]="5"></app-roll-carousel>
 </div>
