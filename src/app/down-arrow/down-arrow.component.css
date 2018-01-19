@@ -18,14 +18,13 @@
     background-image: url("/assets/images/arrow.png");
     background-repeat: no-repeat;
     background-position: center;
+    transition: background-color 300ms;
   }
 
   a:hover {
     background-color: #37bdb5;
   }
 
-  .arrow {
+  #arrow {
     position: relative;
-    top: 30px;
-    left: 20px;
   }
