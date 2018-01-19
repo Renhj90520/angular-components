@@ -1,0 +1,4 @@
+<div class="content" [@scaleanimate]="state">
+  <ng-content></ng-content>
+</div>
+<div class="mask" [ngStyle]="{'display':+maskdisplay}" (click)="close()"></div>

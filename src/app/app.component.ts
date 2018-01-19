@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   @ViewChild('news') news;
   @ViewChild('scrollpanel') scrollpanel;
   @ViewChild('gallery') gallery;
+  @ViewChild('popup') popup;
   carouselItems = [
     { src: 'assets/images/banner-width1.png' },
     { src: 'assets/images/banner-width2.png' },
@@ -55,5 +56,8 @@ export class AppComponent implements OnInit {
   }
   dovote(event) {
     console.log(event);
+  }
+  open() {
+    this.popup.open();
   }
 }

@@ -30,6 +30,7 @@ import { CollapsePanelComponent } from './collapse-panel/collapse-panel.componen
 import { CollapsePanelOtherComponent } from './collapse-panel-other/collapse-panel-other.component';
 import { SlideCarouselComponent } from './slide-carousel/slide-carousel.component';
 import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
+import { MaskPopupComponent } from './mask-popup/mask-popup.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
     CollapsePanelComponent,
     CollapsePanelOtherComponent,
     SlideCarouselComponent,
-    RollCarouselComponent
+    RollCarouselComponent,
+    MaskPopupComponent
   ],
   imports: [
     BrowserModule,

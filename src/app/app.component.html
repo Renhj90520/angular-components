@@ -9,7 +9,7 @@
   <app-timeline></app-timeline>
 </div>
 <section #portfolio>
-  <app-hi-icon icon="fa-amazon"></app-hi-icon>
+  <app-hi-icon icon="fa-amazon" (click)="open()"></app-hi-icon>
 </section>
 <app-triangle-box style="margin-left:10px;"></app-triangle-box>
 <app-slide-menu-full></app-slide-menu-full>
@@ -167,3 +167,4 @@
   <app-slide-carousel [items]="carouselItems"></app-slide-carousel>
   <app-roll-carousel [items]="carouselItems" [showItemNum]="5"></app-roll-carousel>
 </div>
+<app-mask-popup #popup></app-mask-popup>
