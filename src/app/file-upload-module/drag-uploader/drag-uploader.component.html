@@ -1,0 +1,11 @@
+<div class="droparea" appFileUpload [uploader]="uploader" (fileOver)="fileOver($event)" [ngClass]="{over:isFileOver}">
+  <span>点击或拖拽到此处</span>
+  <input type="file"> 
+</div>
+<ul class="files">
+  <li *ngFor="let item of items">
+    <i class="fa {{item.type}}"></i>
+    <br>
+    <span class="file-name"></span>
+  </li>
+</ul>

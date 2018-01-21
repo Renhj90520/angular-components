@@ -13,7 +13,8 @@ export class FileUploadDirective {
 
   @HostListener('change')
   onChange() {
-    const inputEl = this.el.nativeElement.children[0];
+    console.log('onchange');
+    const inputEl = this.el.nativeElement.children[1];
     this.uploader.addToQueue(inputEl.files);
     this.onFileSelected.emit(inputEl.files);
     inputEl.value = '';
@@ -21,21 +22,20 @@ export class FileUploadDirective {
 
   @HostListener('drop', ['$event'])
   onDrop(event) {
-    console.log(event);
+    console.log('ondrop');
     const transfer = event.dataTransfer;
-    if (transfer) {
+    if (!transfer) {
       return;
     }
 
     this.preventAndStop(event);
     this.uploader.addToQueue(transfer.files);
     this.fileOver.emit(false);
-    this.onFileDrop.emit(transfer.files);
+    // this.onFileDrop.emit(transfer.files);
   }
 
   @HostListener('dragover', ['$event'])
   onDragOver(event) {
-    console.log(event);
     const transfer = event.dataTransfer;
     if (this.hasFiles(transfer.types)) {
       transfer.dropEffect = 'copy';

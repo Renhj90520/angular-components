@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   ];
   sections: number[];
   photos = [];
+  files = [];
   @ViewChild('home') home;
   @ViewChild('about') about;
   @ViewChild('services') services;

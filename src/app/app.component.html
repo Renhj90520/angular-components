@@ -163,8 +163,9 @@
     </p>
   </app-collapse-panel>
 </div>
-<div class="wrapper">
+<div class="wrapper" appHighLight>
   <app-slide-carousel [items]="carouselItems"></app-slide-carousel>
   <app-roll-carousel [items]="carouselItems" [showItemNum]="5"></app-roll-carousel>
 </div>
 <app-mask-popup #popup></app-mask-popup>
+<app-drag-uploader></app-drag-uploader>

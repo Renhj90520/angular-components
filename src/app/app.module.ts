@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+import { FileUploadModule } from './file-upload-module/file-upload.module';
 import { AppComponent } from './app.component';
 import { SlideMenuComponent } from './slide-menu/slide-menu.component';
 import { DownArrowComponent } from './down-arrow/down-arrow.component';
@@ -66,7 +67,8 @@ import { MaskPopupComponent } from './mask-popup/mask-popup.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

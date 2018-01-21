@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  position: relative;
+  padding: 5px;
+  background: white;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.droparea {
+  border: dotted 3px #aaa;
+  border-radius: 5px;
+  transition: border 300ms;
+  position: relative;
+  text-align: center;
+}
+
+.droparea input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+}
+
+.droparea span {
+  font-weight: bold;
+  color: #aaa;
+  transition: color 300ms;
+}
+
+.droparea.over,
+.droparea:hover {
+  border: dotted 3px #333;
+}
+
+.droparea.over span,
+.droparea:hover span {
+  color: #333;
+}

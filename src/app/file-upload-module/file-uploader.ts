@@ -5,39 +5,42 @@ import { scan } from 'rxjs/operator/scan';
 export class FileUploader {
     authToken: string;
     queue: FileItem[] = [];
-    progress = 0;
-    next = 0;
-    response: EventEmitter<any>;
+    // response: EventEmitter<any>;
     isUploading = false;
     url: string;
+    completeNum = 0;
+    autoUpload = false;
+    upAll = false;
 
-    constructor(URL: string, token: string) {
-        this.response = new EventEmitter<any>();
+    constructor(URL: string, token: string, autoU: boolean) {
+        // this.response = new EventEmitter<any>();
         this.url = URL;
         this.authToken = token;
+        this.autoUpload = autoU;
     }
 
-    addToQueue(files: File[]): void {
-        files.forEach(file => {
-            this.queue.push(new FileItem(this, file));
-        });
-        // this.progress
-
-        this.uploadAll();
+    addToQueue(files): void {
+        for (let i = 0; i < files.length; i++) {
+            this.queue.push(new FileItem(this, files[i]));
+        }
+        if (this.autoUpload) {
+            this.uploadAll();
+        }
     }
 
     removeFromQueue(item: FileItem): void {
         const index = this.queue.indexOf(item);
         if (item.isUploading) {
             item.onCancel();
+        } else {
+            this.completeNum--;
         }
         this.queue.splice(index, 1);
-        // this.progress
     }
 
     clearQueue(): void {
         this.queue.forEach(item => item.remove());
-        this.progress = 0;
+        this.completeNum = 0;
     }
 
     uploadItem(item: FileItem) {
@@ -54,7 +57,14 @@ export class FileUploader {
     }
 
     uploadAll() {
-        this.queue.forEach(item => item.prepareToUpload());
+        this.queue.forEach(item => {
+            item.prepareToUpload();
+        });
+        const readyItem = this.getReadytItems()[0];
+        this.upAll = true;
+        if (readyItem) {
+            readyItem.upload();
+        }
     }
 
     cancelAll() {
@@ -69,37 +79,43 @@ export class FileUploader {
         return void 0;
     }
 
-    onErrorItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
-        item.onError(response, status, headers);
-    }
-
-    onCompleteItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
-        item.onComplete(response, status, headers);
+    onErrorItem(item: FileItem, response: string) {
+        item.onError(response);
         this.isUploading = false;
-        const next = this.getReadytItems()[0];
-        if (next) {
-            next.upload();
-        } else {
-            // this.onCompleteAll();
-            // this.progress
+        if (this.autoUpload || this.upAll) {
+            const next = this.getReadytItems()[0];
+            if (next) {
+                next.upload();
+            }
         }
     }
 
-    onSuccessItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
-        item.onSuccess(response, status, headers);
+    onCompleteItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
+        item.onComplete(response);
+        this.completeNum++;
+        this.isUploading = false;
+        if (this.autoUpload || this.upAll) {
+            const next = this.getReadytItems()[0];
+            if (next) {
+                next.upload();
+            }
+        }
+
     }
-
-    // onCompleteAll() { }
-
+    onSuccessItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
+        item.onSuccess(response);
+    }
     onProgressItem(item: FileItem, progress) {
+        console.log('progress');
+        console.log(progress);
         item.onProgress(progress);
     }
 
-    onCancelItem(item: FileItem, response: string, status: number, headers: ParsedResponseHeaders) {
+    onCancelItem(item: FileItem) {
         item.onCancel();
     }
     getReadytItems() {
-        return this.queue.filter(item => item.isReady && !item.isUploading);
+        return this.queue.filter(item => item.isReady && !item.isUploading && !item.isUploaded);
     }
     protected _parseHeaders(headers: string): ParsedResponseHeaders {
         const parsed = {};
@@ -141,33 +157,25 @@ export class FileUploader {
         xhr.onload = () => {
             const headers = this._parseHeaders(xhr.getAllResponseHeaders());
             const response = xhr.response;
-            const method = this.isSuccess(xhr.status) ? 'onSuccessItem' : 'onErrorItem';
-
-            (this as any)[method](item, response, xhr.status, headers);
+            // const method = this.isSuccess(xhr.status) ? 'onSuccessItem' : 'onErrorItem';
+            // (this as any)[method](item, response, xhr.status, headers);
             this.onCompleteItem(item, response, xhr.status, headers);
         };
 
         xhr.onerror = () => {
             const headers = this._parseHeaders(xhr.getAllResponseHeaders());
             const response = xhr.response;
-            this.onErrorItem(item, response, xhr.status, headers);
+            this.onErrorItem(item, response);
         };
 
         xhr.onabort = () => {
             const headers = this._parseHeaders(xhr.getAllResponseHeaders());
             const response = xhr.response;
-            this.onCancelItem(item, response, xhr.status, headers);
+            this.onCancelItem(item);
         };
         xhr.open('POST', this.url, true);
-        xhr.withCredentials = true;
+        // xhr.withCredentials = true;
         xhr.setRequestHeader('Authorization', this.authToken);
-
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                this.response.emit(xhr.responseText);
-            }
-        };
-
         xhr.send(sendable);
     }
 }
