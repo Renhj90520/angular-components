@@ -34,3 +34,8 @@ app-roll-carousel {
   width: 900px;
   height: 80px;
 }
+
+app-drag-uploader{
+  width: 600px;
+  height: 300px;
+}

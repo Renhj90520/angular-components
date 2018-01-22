@@ -5,18 +5,16 @@ import { FileUploader } from './file-uploader';
 })
 export class FileUploadDirective {
   @Input() uploader: FileUploader;
-  @Output() onFileSelected: EventEmitter<File[]> = new EventEmitter<File[]>();
+  @Output() fileSelected: EventEmitter<File[]> = new EventEmitter<File[]>();
   @Output() fileOver: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onFileDrop: EventEmitter<File[]> = new EventEmitter<File[]>();
 
   constructor(private el: ElementRef) { }
 
   @HostListener('change')
   onChange() {
-    console.log('onchange');
     const inputEl = this.el.nativeElement.children[1];
     this.uploader.addToQueue(inputEl.files);
-    this.onFileSelected.emit(inputEl.files);
+    this.fileSelected.emit(inputEl.files);
     inputEl.value = '';
   }
 
@@ -31,7 +29,7 @@ export class FileUploadDirective {
     this.preventAndStop(event);
     this.uploader.addToQueue(transfer.files);
     this.fileOver.emit(false);
-    // this.onFileDrop.emit(transfer.files);
+    this.fileSelected.emit(transfer.files);
   }
 
   @HostListener('dragover', ['$event'])

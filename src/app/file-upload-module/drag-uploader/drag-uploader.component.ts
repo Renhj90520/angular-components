@@ -17,9 +17,10 @@ export class DragUploaderComponent implements OnInit {
 
   selectChange() {
     console.log('file select change');
+    this.items = this.uploader.queue;
+    console.log(this.items);
   }
   fileOver(event) {
     this.isFileOver = event;
-    console.log(event);
   }
 }
