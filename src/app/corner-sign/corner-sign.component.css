@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 65px;
+  height: 68px;
+  overflow: hidden;
+}
+
+p {
+  transform: rotate(45deg);
+  width: 90px;
+  font-size: 13px;
+  background-color: #609450;
+  color: white;
+  text-align: center;
+  position: relative;
+  left: -8px;
+  top: 18px;
+}

@@ -32,6 +32,7 @@ import { CollapsePanelOtherComponent } from './collapse-panel-other/collapse-pan
 import { SlideCarouselComponent } from './slide-carousel/slide-carousel.component';
 import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
 import { MaskPopupComponent } from './mask-popup/mask-popup.component';
+import { CornerSignComponent } from './corner-sign/corner-sign.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MaskPopupComponent } from './mask-popup/mask-popup.component';
     CollapsePanelOtherComponent,
     SlideCarouselComponent,
     RollCarouselComponent,
-    MaskPopupComponent
+    MaskPopupComponent,
+    CornerSignComponent
   ],
   imports: [
     BrowserModule,
