@@ -24,9 +24,14 @@ export class RollCarouselComponent implements OnInit {
     this.el.nativeElement.onmouseleave = () => {
       this.state = 'out';
     };
-    this.itemheight = this.el.nativeElement.clientHeight;
-    this.itemwidth = this.el.nativeElement.clientWidth / this.showItemNum;
-    this.wrapperWidth = this.itemwidth * this.items.length;
+
+    const init = () => {
+      this.itemheight = this.el.nativeElement.clientHeight;
+      this.itemwidth = this.el.nativeElement.clientWidth / this.showItemNum;
+      this.wrapperWidth = this.itemwidth * this.items.length;
+    };
+    init();
+    window.onresize = init;
   }
 
   prev() {

@@ -24,9 +24,13 @@ export class SlideCarouselComponent implements OnInit, OnDestroy {
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
-    this.width = this.el.nativeElement.clientWidth;
-    this.height = this.el.nativeElement.clientHeight;
-    this.wrapperWidth = this.width * this.items.length;
+    const init = () => {
+      this.width = this.el.nativeElement.clientWidth;
+      this.height = this.el.nativeElement.clientHeight;
+      this.wrapperWidth = this.width * this.items.length;
+    };
+    init();
+    window.onresize = init;
     this.el.nativeElement.onmouseenter = () => {
       this.state = 'in';
       this.play = false;
