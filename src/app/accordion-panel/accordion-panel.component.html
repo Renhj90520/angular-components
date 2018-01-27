@@ -1,0 +1,1 @@
+<app-accordion-item *ngFor="let item of items;let i=index;" (ontoggle)="toggle(i,$event)" [item]="item" [expand]="states[i]"></app-accordion-item>

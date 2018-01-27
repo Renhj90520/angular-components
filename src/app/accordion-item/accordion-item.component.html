@@ -1,0 +1,7 @@
+<h2 (click)="toggle()" [ngClass]="{'active':expand}">
+  <i class="fa" [ngClass]="{'fa-plus':!expand,'fa-minus':expand}"></i>
+  <span>{{item.title}}</span>
+</h2>
+<div class="content">
+  {{item.content}}
+</div>

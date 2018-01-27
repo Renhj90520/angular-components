@@ -34,6 +34,8 @@ import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
 import { MaskPopupComponent } from './mask-popup/mask-popup.component';
 import { CornerSignComponent } from './corner-sign/corner-sign.component';
 import { TabPanelBlueComponent } from './tab-panel-blue/tab-panel-blue.component';
+import { AccordionPanelComponent } from './accordion-panel/accordion-panel.component';
+import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { TabPanelBlueComponent } from './tab-panel-blue/tab-panel-blue.component
     RollCarouselComponent,
     MaskPopupComponent,
     CornerSignComponent,
-    TabPanelBlueComponent
+    TabPanelBlueComponent,
+    AccordionPanelComponent,
+    AccordionItemComponent
   ],
   imports: [
     BrowserModule,
