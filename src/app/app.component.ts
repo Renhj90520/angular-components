@@ -38,6 +38,36 @@ export class AppComponent implements OnInit {
     { src: 'assets/images/banner-width5.png' },
     { src: 'assets/images/banner-width1.png' },
   ];
+
+  tabitems = [{
+    title: 'Panel One',
+    content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+  }, {
+    title: 'Panel Two',
+    content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua 1.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+  }, {
+    title: 'Panel Three',
+    content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua 2.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+  }
+  ];
   ngOnInit() {
     this.sections = [];
     this.sections.push(this.home.nativeElement.offsetTop);

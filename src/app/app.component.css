@@ -13,10 +13,16 @@ app-scroll-panel {
   top: 0;
 }
 
-.wrapper {
+.wrapper,
+.wrapper-w {
   background-color: #ebeae7;
   padding: 10px 60px;
   position: relative;
+}
+
+.wrapper-w {
+  background-color: white;
+  padding: 30px;
 }
 
 .scroll-panel-wrapper {

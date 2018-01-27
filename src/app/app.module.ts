@@ -33,6 +33,7 @@ import { SlideCarouselComponent } from './slide-carousel/slide-carousel.componen
 import { RollCarouselComponent } from './roll-carousel/roll-carousel.component';
 import { MaskPopupComponent } from './mask-popup/mask-popup.component';
 import { CornerSignComponent } from './corner-sign/corner-sign.component';
+import { TabPanelBlueComponent } from './tab-panel-blue/tab-panel-blue.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { CornerSignComponent } from './corner-sign/corner-sign.component';
     SlideCarouselComponent,
     RollCarouselComponent,
     MaskPopupComponent,
-    CornerSignComponent
+    CornerSignComponent,
+    TabPanelBlueComponent
   ],
   imports: [
     BrowserModule,

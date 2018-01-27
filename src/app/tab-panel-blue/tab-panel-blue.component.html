@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let item of items;let i=index;" [ngClass]="{'active':i===current}">
+    <a (click)="active(i)">{{item.title}}</a>
+  </li>
+</ul>
+<div class="content">
+  {{content}}
+</div>
