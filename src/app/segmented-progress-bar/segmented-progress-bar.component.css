@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  border: 1px solid #003d75;
+  border-radius: 1px;
+  padding: 6px;
+  height: 20px;
+  min-height: 0;
+  position: relative;
+}
+:host::before {
+  content: " ";
+  position: absolute;
+  width: 12.411%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top left;
+  background-image: url(/assets/images/left-glow.png);
+}
+:host::after {
+  content: " ";
+  position: absolute;
+  width: 12.411%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top left;
+  background-image: url(/assets/images/right-glow.png);
+}

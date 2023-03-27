@@ -36,6 +36,7 @@ import { CornerSignComponent } from './corner-sign/corner-sign.component';
 import { TabPanelBlueComponent } from './tab-panel-blue/tab-panel-blue.component';
 import { AccordionPanelComponent } from './accordion-panel/accordion-panel.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { SegmentedProgressBarComponent } from './segmented-progress-bar/segmented-progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { AccordionItemComponent } from './accordion-item/accordion-item.componen
     CornerSignComponent,
     TabPanelBlueComponent,
     AccordionPanelComponent,
-    AccordionItemComponent
+    AccordionItemComponent,
+    SegmentedProgressBarComponent
   ],
   imports: [
     BrowserModule,

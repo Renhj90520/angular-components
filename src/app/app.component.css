@@ -29,7 +29,7 @@ app-scroll-panel {
   width: 600px;
   height: 400px;
   margin: 20px auto;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 app-slide-carousel {
@@ -45,4 +45,15 @@ app-roll-carousel {
 app-drag-uploader {
   width: 600px;
   height: 300px;
+}
+
+.bar-wrapper {
+  height: 100px;
+  padding: 20px;
+  background-color: #07225b;
+}
+
+app-segmented-progress-bar {
+  width: 300px;
+  height: 30px;
 }

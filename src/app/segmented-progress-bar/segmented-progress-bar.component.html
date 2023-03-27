@@ -1,0 +1,44 @@
+<svg
+  class="dotted-line"
+  #svg
+  style="width: 100%; height: 100%; display: inherit"
+>
+  <defs>
+    <linearGradient [id]="'gradient' + id" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0%" [attr.stop-color]="gradients[0]"></stop>
+      <stop offset="100%" [attr.stop-color]="gradients[1]"></stop>
+    </linearGradient>
+    <clipPath [id]="id">
+      <rect
+        v-for="(segment, idx) in segments"
+        *ngFor="let segment of segments; let idx = index"
+        [attr.x]="segment.x"
+        [attr.y]="segment.y"
+        [attr.width]="segment.width"
+        [attr.height]="segment.height"
+        rx="1"
+        ry="1"
+      ></rect>
+    </clipPath>
+  </defs>
+  <rect
+    id="rect"
+    x="0"
+    y="0"
+    [attr.width]="gradientPercent"
+    height="100%"
+    [attr.fill]="'url(#gradient' + id + ')'"
+    [attr.clip-path]="'url(#' + id + ')'"
+  />
+  <rect
+    *ngFor="let segment of extras; let idx = index"
+    [id]="idx"
+    [attr.x]="segment.x"
+    [attr.y]="segment.y"
+    [attr.width]="segment.width"
+    [attr.height]="segment.height"
+    fill="rgba(0,26,50,.4)"
+    rx="1"
+    ry="1"
+  ></rect>
+</svg>

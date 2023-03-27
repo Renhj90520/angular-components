@@ -11,10 +11,13 @@
 <section #portfolio>
   <app-hi-icon icon="fa-amazon" (click)="open()"></app-hi-icon>
 </section>
-<app-triangle-box style="margin-left:10px;"></app-triangle-box>
+<app-triangle-box style="margin-left: 10px"></app-triangle-box>
 <app-slide-menu-full></app-slide-menu-full>
 <section #news>
-  <app-video-player thumbUrl="https://i.vimeocdn.com/video/629997474.webp?mw=800&mh=450" videoUrl="https://03-lvl3-pdl.vimeocdn.com/01/4175/1/45878034/109676038.mp4?expires=1515400002&token=01719db9c18b2bd1bac22"></app-video-player>
+  <app-video-player
+    thumbUrl="https://i.vimeocdn.com/video/629997474.webp?mw=800&mh=450"
+    videoUrl="https://03-lvl3-pdl.vimeocdn.com/01/4175/1/45878034/109676038.mp4?expires=1515400002&token=01719db9c18b2bd1bac22"
+  ></app-video-player>
 </section>
 <section class="scroll-panel-wrapper" #scrollpanel>
   <app-scroll-panel>
@@ -72,7 +75,10 @@
           </ul>
         </div>
         <div class="right">
-          <span>Sed sapien urna, auctor et accumsan ut. Sed sapien urna, auctor et</span>
+          <span
+            >Sed sapien urna, auctor et accumsan ut. Sed sapien urna, auctor
+            et</span
+          >
         </div>
       </div>
       <div class="clearfix">
@@ -86,7 +92,10 @@
           </ul>
         </div>
         <div class="right">
-          <span>Mauris cursus metus in nulla eleifend ullamcorper placerat massa pharetra.</span>
+          <span
+            >Mauris cursus metus in nulla eleifend ullamcorper placerat massa
+            pharetra.</span
+          >
         </div>
       </div>
       <div class="clearfix">
@@ -114,7 +123,10 @@
           </ul>
         </div>
         <div class="right">
-          <span>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</span>
+          <span
+            >Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra.</span
+          >
         </div>
       </div>
       <a href="#" class="button">Download the CV</a>
@@ -136,36 +148,56 @@
   <app-vote-rate currentValue="2" (vote)="dovote($event)"></app-vote-rate>
 </div>
 <div class="wrapper">
-  <app-gallery-item src="assets/images/example_4.jpg" title="LOREM IPSUM DOLOR" description="Some description"></app-gallery-item>
-  <app-gallery-item-animate src="assets/images/example_4.jpg" title="LOREM IPSUM DOLOR" description="Some description"></app-gallery-item-animate>
+  <app-gallery-item
+    src="assets/images/example_4.jpg"
+    title="LOREM IPSUM DOLOR"
+    description="Some description"
+  ></app-gallery-item>
+  <app-gallery-item-animate
+    src="assets/images/example_4.jpg"
+    title="LOREM IPSUM DOLOR"
+    description="Some description"
+  ></app-gallery-item-animate>
 </div>
 <app-gallery #gallery title="Sortable Gallery" [photos]="photos"></app-gallery>
 <div class="wrapper">
   <app-collapse-panel-other title="Title">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius ligula et enim posuere ac hendrerit eros varius.
-      Mauris ut sollicitudin odio. Aliquam in facilisis massa. Donec vel est adipiscing dui congue bibendum. Aliquam aliquam
-      sollicitudin euismod. Fusce sit amet scelerisque urna. Curabitur ultrices velit sed metus dignissim venenatis. Vivamus
-      urna augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec orci mattis lobortis. Vivamus id libero
-      est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius
+      ligula et enim posuere ac hendrerit eros varius. Mauris ut sollicitudin
+      odio. Aliquam in facilisis massa. Donec vel est adipiscing dui congue
+      bibendum. Aliquam aliquam sollicitudin euismod. Fusce sit amet scelerisque
+      urna. Curabitur ultrices velit sed metus dignissim venenatis. Vivamus urna
+      augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec
+      orci mattis lobortis. Vivamus id libero est. Proin quis nunc non tortor
+      ornare tempor fermentum at dolor. Cras vel turpis magna.
+    </p>
   </app-collapse-panel-other>
 </div>
 
 <div class="wrapper">
   <app-collapse-panel title="Title">
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged.
     </p>
     <p>
-      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      It was popularised in the 1960s with the release of Letraset sheets
+      containing Lorem Ipsum passages, and more recently with desktop publishing
+      software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
   </app-collapse-panel>
 </div>
 <div class="wrapper" appHighLight>
   <app-slide-carousel [items]="carouselItems"></app-slide-carousel>
-  <app-roll-carousel [items]="carouselItems" [showItemNum]="5"></app-roll-carousel>
+  <app-roll-carousel
+    [items]="carouselItems"
+    [showItemNum]="5"
+  ></app-roll-carousel>
 </div>
 <app-mask-popup #popup></app-mask-popup>
 <div class="wrapper">
@@ -177,4 +209,7 @@
 </div>
 <div class="wrapper-w">
   <app-accordion-panel [items]="tabitems"></app-accordion-panel>
+</div>
+<div class="bar-wrapper">
+  <app-segmented-progress-bar [val]="60"></app-segmented-progress-bar>
 </div>
